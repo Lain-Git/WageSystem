@@ -1,0 +1,19 @@
+server:
+  port: 80
+# Druid数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wagemanage?serverTimezone=UTC
+    username: root
+    password: pjl20031006
+    type: com.alibaba.druid.pool.DruidDataSource
+# MP配置
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb_
+      id-type: auto
+# 控制台输出日志（可查看SQL执行过程）
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
